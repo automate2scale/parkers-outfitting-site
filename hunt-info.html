@@ -8,9 +8,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Condensed:wght@600&family=Bitter:wght@700&display=swap">
 <style>
-
-:root{
-  /* sampled from the Parker's Outfitting badge */
+#po-page{
+  
   --ground:#122017; --panel:#17281D; --panel-2:#1D3124; --cypress:#1A2E20;
   --deep:#0D1711;
   --bone:#F3EFE5; --bone-2:#C6CCBC; --muted:#8B9482;
@@ -23,254 +22,244 @@
   --cond:"Barlow Condensed","Barlow",sans-serif;
   --shadow:0 18px 44px rgba(0,0,0,.45);
 }
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ground);color:var(--bone);
+#po-page *{box-sizing:border-box}
+#po-page{scroll-behavior:smooth}
+#po-page{margin:0;background:var(--ground);color:var(--bone);
   font-family:var(--body);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased}
-img{max-width:100%;display:block}
-a{color:var(--accent-hi)}
-.wrap{max-width:1140px;margin:0 auto;padding-inline:22px}
-.narrow{max-width:760px}
-
-/* ---------- labels + headings ---------- */
-.eyebrow{font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.22em;
+#po-page img{max-width:100%;display:block}
+#po-page a{color:var(--accent-hi)}
+#po-page .wrap{max-width:1140px;margin:0 auto;padding-inline:22px}
+#po-page .narrow{max-width:760px}
+#po-page .eyebrow{font-family:var(--cond);font-size:13px;font-weight:600;letter-spacing:.22em;
   text-transform:uppercase;color:var(--accent);margin:0 0 14px;display:flex;
   align-items:center;gap:10px}
-.eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);flex:none}
-h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
+#po-page .eyebrow::before{content:"";width:22px;height:2px;background:var(--accent);flex:none}
+#po-page h1, #po-page h2, #po-page h3{font-family:var(--display);font-weight:700;letter-spacing:-.015em;
   line-height:1.12;text-wrap:balance;margin:0 0 16px}
-h1{font-size:clamp(34px,5.6vw,58px);line-height:1.05}
-h2{font-size:clamp(26px,3.6vw,38px)}
-h3{font-size:21px;line-height:1.2}
-.sub{font-size:clamp(18px,2vw,21px);color:var(--bone-2);margin:0 0 22px;max-width:62ch}
-p{margin:0 0 17px}
-.lede{font-size:19px;color:var(--bone-2)}
-
-/* ---------- top bar ---------- */
-.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
+#po-page h1{font-size:clamp(34px,5.6vw,58px);line-height:1.05}
+#po-page h2{font-size:clamp(26px,3.6vw,38px)}
+#po-page h3{font-size:21px;line-height:1.2}
+#po-page .sub{font-size:clamp(18px,2vw,21px);color:var(--bone-2);margin:0 0 22px;max-width:62ch}
+#po-page p{margin:0 0 17px}
+#po-page .lede{font-size:19px;color:var(--bone-2)}
+#po-page .topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:60;
   background:rgba(18,32,23,.95);backdrop-filter:blur(9px);
   border-bottom:1px solid var(--rule)}
-.topin{max-width:1140px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:18px}
-.brand{display:flex;align-items:center;gap:12px;line-height:1;text-decoration:none;flex:none}
-.brand .mark{width:46px;height:46px;flex:none;display:block}
-.brand .wm{display:flex;flex-direction:column}
-@media(max-width:420px){.brand .mark{width:38px;height:38px}.brand{gap:9px}}
-.brand b{font-family:var(--display);font-size:18.5px;font-weight:700;color:var(--bone);letter-spacing:-.01em}
-.brand span{font-family:var(--cond);font-size:10.5px;font-weight:600;letter-spacing:.2em;
+#po-page .topin{max-width:1140px;margin:0 auto;padding:12px 22px;display:flex;align-items:center;gap:18px}
+#po-page .brand{display:flex;align-items:center;gap:12px;line-height:1;text-decoration:none;flex:none}
+#po-page .brand .mark{width:46px;height:46px;flex:none;display:block}
+#po-page .brand .wm{display:flex;flex-direction:column}
+@media(max-width:420px){#po-page .brand .mark{width:38px;height:38px}
+#po-page .brand{gap:9px}
+}
+#po-page .brand b{font-family:var(--display);font-size:18.5px;font-weight:700;color:var(--bone);letter-spacing:-.01em}
+#po-page .brand span{font-family:var(--cond);font-size:10.5px;font-weight:600;letter-spacing:.2em;
   text-transform:uppercase;color:var(--gold);margin-top:4px}
-nav.main{margin-left:auto;display:flex;align-items:center;gap:15px}
-nav.main a{font-family:var(--cond);font-size:13.5px;font-weight:600;letter-spacing:.09em;
+#po-page nav.main{margin-left:auto;display:flex;align-items:center;gap:15px}
+#po-page nav.main a{font-family:var(--cond);font-size:13.5px;font-weight:600;letter-spacing:.09em;
   text-transform:uppercase;color:var(--bone-2);text-decoration:none;white-space:nowrap;
   transition:color .13s}
-nav.main a:hover,nav.main a[aria-current="page"]{color:var(--accent-hi)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+#po-page nav.main a:hover, #po-page nav.main a[aria-current="page"]{color:var(--accent-hi)}
+#po-page .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
   font-family:var(--cond);font-size:15px;font-weight:600;letter-spacing:.09em;
   text-transform:uppercase;padding:12px 22px;border-radius:3px;text-decoration:none;
   border:1px solid transparent;cursor:pointer;transition:.14s;white-space:nowrap}
-.btn.solid{background:#C9A45C;color:#111E0E;border-color:#C9A45C;font-weight:600}
-.btn.solid:hover{background:var(--gold-hi);border-color:var(--gold-hi);color:#111E0E}
-.btn.ghost{border-color:var(--rule);color:var(--bone)}
-.btn.ghost:hover{border-color:var(--accent);color:var(--accent-hi)}
-.btn.sm{padding:9px 16px;font-size:13.5px}
-.btn:focus-visible{outline:2px solid var(--accent-hi);outline-offset:3px}
-@media(max-width:1280px){nav.main{display:none}
-  .topbar .btn{display:none}
-  .topin{padding:11px 18px}}
-@media(max-width:380px){.brand b{font-size:17px}.brand span{font-size:9.5px}}
-
-/* ---------- hero ---------- */
-.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
-.hero .sky{position:absolute;inset:0;z-index:0;
+#po-page .btn.solid{background:#C9A45C;color:#111E0E;border-color:#C9A45C;font-weight:600}
+#po-page .btn.solid:hover{background:var(--gold-hi);border-color:var(--gold-hi);color:#111E0E}
+#po-page .btn.ghost{border-color:var(--rule);color:var(--bone)}
+#po-page .btn.ghost:hover{border-color:var(--accent);color:var(--accent-hi)}
+#po-page .btn.sm{padding:9px 16px;font-size:13.5px}
+#po-page .btn:focus-visible{outline:2px solid var(--accent-hi);outline-offset:3px}
+@media(max-width:1280px){#po-page nav.main{display:none}
+#po-page .topbar .btn{display:none}
+#po-page .topin{padding:11px 18px}
+}
+@media(max-width:380px){#po-page .brand b{font-size:17px}
+#po-page .brand span{font-size:9.5px}
+}
+#po-page .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--rule)}
+#po-page .hero .sky{position:absolute;inset:0;z-index:0;
   background:
     radial-gradient(116% 72% at 24% 104%, rgba(231,204,146,.34) 0%, rgba(171,134,78,.12) 44%, rgba(171,134,78,0) 66%),
     linear-gradient(178deg,#0C1610 0%,#122017 36%,#17281D 66%,#243522 100%)}
-/* horizon band — replaced by Ben's hero photograph once it lands */
-.hero .horizon{position:absolute;left:0;right:0;bottom:0;z-index:1;height:44%;
+#po-page .hero .horizon{position:absolute;left:0;right:0;bottom:0;z-index:1;height:44%;
   background:linear-gradient(to top,#0D1711 0%,rgba(13,23,17,.86) 34%,rgba(13,23,17,0) 100%)}
-.hero .horizon::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
+#po-page .hero .horizon::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1px;
   background:linear-gradient(to right,transparent,rgba(171,134,78,.55) 30%,rgba(171,134,78,.55) 70%,transparent)}
-.hero .inner{position:relative;z-index:2;padding-block:clamp(64px,11vw,124px) clamp(92px,13vw,150px)}
-.herorow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
-.herobadge{width:clamp(180px,19vw,260px);height:auto;flex:none;
+#po-page .hero .inner{position:relative;z-index:2;padding-block:clamp(64px,11vw,124px) clamp(92px,13vw,150px)}
+#po-page .herorow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:48px;align-items:center}
+#po-page .herobadge{width:clamp(180px,19vw,260px);height:auto;flex:none;
   filter:drop-shadow(0 14px 34px rgba(0,0,0,.5))}
-@media(max-width:940px){.herorow{grid-template-columns:1fr}.herobadge{display:none}}
-.footmark{width:86px;height:86px;margin-bottom:18px;opacity:.95}
-.hero h1{max-width:19ch}
-.hero .sub{max-width:56ch}
-.ctarow{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
-.hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;
+@media(max-width:940px){#po-page .herorow{grid-template-columns:1fr}
+#po-page .herobadge{display:none}
+}
+#po-page .footmark{width:86px;height:86px;margin-bottom:18px;opacity:.95}
+#po-page .hero h1{max-width:19ch}
+#po-page .hero .sub{max-width:56ch}
+#po-page .ctarow{display:flex;gap:13px;flex-wrap:wrap;margin-top:30px}
+#po-page .hero-facts{display:flex;gap:26px;flex-wrap:wrap;margin-top:38px;
   padding-top:24px;border-top:1px solid rgba(242,237,228,.14)}
-.hero-facts div{min-width:120px}
-.hero-facts .n{font-family:var(--display);font-size:25px;font-weight:700;color:var(--gold-hi);
+#po-page .hero-facts div{min-width:120px}
+#po-page .hero-facts .n{font-family:var(--display);font-size:25px;font-weight:700;color:var(--gold-hi);
   line-height:1;margin-bottom:6px}
-.hero-facts .l{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.15em;
+#po-page .hero-facts .l{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.15em;
   text-transform:uppercase;color:var(--muted)}
-
-/* ---------- season bar ---------- */
-.seasonbar{background:var(--accent-t);border-bottom:1px solid var(--bronze)}
-.seasonbar .in{max-width:1140px;margin:0 auto;padding:17px 22px;display:flex;
+#po-page .seasonbar{background:var(--accent-t);border-bottom:1px solid var(--bronze)}
+#po-page .seasonbar .in{max-width:1140px;margin:0 auto;padding:17px 22px;display:flex;
   align-items:center;gap:20px;flex-wrap:wrap}
-.seasonbar .lab{font-family:var(--cond);font-size:12.5px;font-weight:600;letter-spacing:.17em;
+#po-page .seasonbar .lab{font-family:var(--cond);font-size:12.5px;font-weight:600;letter-spacing:.17em;
   text-transform:uppercase;color:var(--accent-hi);flex:none}
-.seasonbar .dates{font-size:15.5px;color:var(--bone);flex:1;min-width:260px}
-.seasonbar .dates b{color:var(--accent-hi);font-weight:600}
-
-/* ---------- sections ---------- */
-section{padding-block:clamp(54px,8vw,86px)}
-section.alt{background:var(--panel);border-block:1px solid var(--rule)}
-section.deep{background:var(--cypress);border-block:1px solid #354C3A}
-.shead{max-width:64ch;margin-bottom:38px}
-
-/* ---------- cards ---------- */
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));gap:20px}
-.card{background:var(--panel-2);border:1px solid var(--rule);border-radius:5px;
+#po-page .seasonbar .dates{font-size:15.5px;color:var(--bone);flex:1;min-width:260px}
+#po-page .seasonbar .dates b{color:var(--accent-hi);font-weight:600}
+#po-page section{padding-block:clamp(54px,8vw,86px)}
+#po-page section.alt{background:var(--panel);border-block:1px solid var(--rule)}
+#po-page section.deep{background:var(--cypress);border-block:1px solid #354C3A}
+#po-page .shead{max-width:64ch;margin-bottom:38px}
+#po-page .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(286px,1fr));gap:20px}
+#po-page .card{background:var(--panel-2);border:1px solid var(--rule);border-radius:5px;
   padding:26px 24px 24px;display:flex;flex-direction:column;gap:13px;
   transition:border-color .15s,transform .15s}
-.card:hover{border-color:var(--accent);transform:translateY(-3px)}
-.card .tag{font-family:var(--cond);font-size:11px;font-weight:600;letter-spacing:.18em;
+#po-page .card:hover{border-color:var(--accent);transform:translateY(-3px)}
+#po-page .card .tag{font-family:var(--cond);font-size:11px;font-weight:600;letter-spacing:.18em;
   text-transform:uppercase;color:var(--accent);align-self:flex-start}
-.card p{color:var(--bone-2);font-size:16px;margin:0;flex:1}
-.card .btn{align-self:flex-start;margin-top:6px}
-.card.premium{border-color:var(--bronze);background:linear-gradient(168deg,#24301C,#1D3124 64%)}
-
-/* ---------- prose lists ---------- */
-ul.ticks{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:11px}
-ul.ticks li{position:relative;padding-left:28px;color:var(--bone-2)}
-ul.ticks li::before{content:"";position:absolute;left:0;top:10px;width:13px;height:2px;
+#po-page .card p{color:var(--bone-2);font-size:16px;margin:0;flex:1}
+#po-page .card .btn{align-self:flex-start;margin-top:6px}
+#po-page .card.premium{border-color:var(--bronze);background:linear-gradient(168deg,#24301C,#1D3124 64%)}
+#po-page ul.ticks{list-style:none;padding:0;margin:0 0 20px;display:grid;gap:11px}
+#po-page ul.ticks li{position:relative;padding-left:28px;color:var(--bone-2)}
+#po-page ul.ticks li::before{content:"";position:absolute;left:0;top:10px;width:13px;height:2px;
   background:var(--accent)}
-ul.plain{padding-left:20px;color:var(--bone-2)}
-ul.plain li{margin-bottom:8px}
-
-/* ---------- rate table ---------- */
-.rates{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:16px}
-.rates th,.rates td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--rule)}
-.rates thead th{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.15em;
+#po-page ul.plain{padding-left:20px;color:var(--bone-2)}
+#po-page ul.plain li{margin-bottom:8px}
+#po-page .rates{width:100%;border-collapse:collapse;margin:0 0 22px;font-size:16px}
+#po-page .rates th, #po-page .rates td{text-align:left;padding:14px 16px;border-bottom:1px solid var(--rule)}
+#po-page .rates thead th{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.15em;
   text-transform:uppercase;color:var(--muted);border-bottom:1px solid var(--rule)}
-.rates td.num{font-variant-numeric:tabular-nums;color:var(--accent-hi);font-weight:600;white-space:nowrap}
-.tblwrap{overflow-x:auto}
-
-/* ---------- pull / callout ---------- */
-.pull{border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:26px 0;
+#po-page .rates td.num{font-variant-numeric:tabular-nums;color:var(--accent-hi);font-weight:600;white-space:nowrap}
+#po-page .tblwrap{overflow-x:auto}
+#po-page .pull{border-left:3px solid var(--accent);padding:6px 0 6px 22px;margin:26px 0;
   font-family:var(--display);font-size:21px;line-height:1.4;color:var(--bone)}
-.note{background:var(--panel-2);border:1px solid var(--rule);border-radius:4px;
+#po-page .note{background:var(--panel-2);border:1px solid var(--rule);border-radius:4px;
   padding:18px 20px;font-size:15.5px;color:var(--bone-2);margin:24px 0}
-.note b{color:var(--bone)}
-.note.ambernote{border-color:var(--warn);background:rgba(249,219,156,.07)}
-.note a{color:var(--accent-hi)}
-.emailalt{margin:16px 0 0;font-size:14.5px;color:var(--bone-2)}
-.emailalt a{color:var(--accent-hi);text-decoration:underline}
-.ctanote{background:var(--accent-t);border:1px solid var(--bronze);border-radius:4px;
+#po-page .note b{color:var(--bone)}
+#po-page .note.ambernote{border-color:var(--warn);background:rgba(249,219,156,.07)}
+#po-page .note a{color:var(--accent-hi)}
+#po-page .emailalt{margin:16px 0 0;font-size:14.5px;color:var(--bone-2)}
+#po-page .emailalt a{color:var(--accent-hi);text-decoration:underline}
+#po-page .ctanote{background:var(--accent-t);border:1px solid var(--bronze);border-radius:4px;
   padding:16px 19px;font-size:15.5px;color:var(--bone);margin:0 0 20px;line-height:1.55}
-.ctanote b{color:var(--accent-hi);font-weight:600}
-
-/* ---------- photo slots ---------- */
-.slot{position:relative;border:1px dashed #3E5744;border-radius:5px;background:
+#po-page .ctanote b{color:var(--accent-hi);font-weight:600}
+#po-page .slot{position:relative;border:1px dashed #3E5744;border-radius:5px;background:
   repeating-linear-gradient(135deg,#16251B,#16251B 11px,#1A2C20 11px,#1A2C20 22px);
   display:flex;align-items:center;justify-content:center;text-align:center;
   padding:26px 20px;min-height:210px}
-.slot .in{max-width:34ch}
-.slot .k{font-family:var(--cond);font-size:11.5px;font-weight:600;letter-spacing:.18em;
+#po-page .slot .in{max-width:34ch}
+#po-page .slot .k{font-family:var(--cond);font-size:11.5px;font-weight:600;letter-spacing:.18em;
   text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-.slot .d{font-size:14.5px;color:var(--muted);line-height:1.45}
-.slot code{font-size:12.5px;color:var(--bone-2);background:#0F1A13;padding:2px 6px;
+#po-page .slot .d{font-size:14.5px;color:var(--muted);line-height:1.45}
+#po-page .slot code{font-size:12.5px;color:var(--bone-2);background:#0F1A13;padding:2px 6px;
   border-radius:2px;display:inline-block;margin-top:9px;word-break:break-all}
-.slot.wide{min-height:300px}
-.slotgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
-
-/* ---------- video ---------- */
-.videorow{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:46px;
+#po-page .slot.wide{min-height:300px}
+#po-page .slotgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px}
+#po-page .videorow{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:46px;
   align-items:center}
-@media(max-width:860px){.videorow{grid-template-columns:1fr;gap:30px}
-  .videoframe{max-width:340px;margin-inline:auto}}
-.videoframe{position:relative;aspect-ratio:9/16;width:100%;border-radius:6px;overflow:hidden;
+@media(max-width:860px){#po-page .videorow{grid-template-columns:1fr;gap:30px}
+#po-page .videoframe{max-width:340px;margin-inline:auto}
+}
+#po-page .videoframe{position:relative;aspect-ratio:9/16;width:100%;border-radius:6px;overflow:hidden;
   border:1px solid var(--bronze);background:var(--deep);box-shadow:var(--shadow)}
-.videoframe video,.videoframe iframe,.videoframe blockquote{position:absolute;inset:0;
+#po-page .videoframe video, #po-page .videoframe iframe, #po-page .videoframe blockquote{position:absolute;inset:0;
   width:100%!important;height:100%!important;margin:0!important;border:0;
   min-width:0!important;max-width:none!important;object-fit:cover;background:var(--deep)}
-/* shown whenever the Instagram script is blocked or slow — never a broken box */
-.igfallback{position:absolute;inset:0;display:flex;flex-direction:column;
+#po-page .igfallback{position:absolute;inset:0;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:16px;text-align:center;padding:30px 24px;
   background:linear-gradient(168deg,#1A2E20,#0D1711)}
-.igfallback .ico{width:46px;height:46px;border-radius:12px;border:2px solid var(--gold);
+#po-page .igfallback .ico{width:46px;height:46px;border-radius:12px;border:2px solid var(--gold);
   display:flex;align-items:center;justify-content:center;color:var(--gold);flex:none}
-.igfallback .t{font-family:var(--display);font-size:19px;font-weight:700;color:var(--bone);
+#po-page .igfallback .t{font-family:var(--display);font-size:19px;font-weight:700;color:var(--bone);
   line-height:1.25;max-width:22ch}
-.igfallback .d{font-size:14px;color:var(--muted);max-width:28ch;line-height:1.45}
-.videocap{font-size:13.5px;color:var(--muted);margin-top:12px;text-align:center}
-
-/* ---------- faq ---------- */
-.faq{display:grid;gap:0;border-top:1px solid var(--rule)}
-.faq details{border-bottom:1px solid var(--rule)}
-.faq summary{cursor:pointer;padding:20px 40px 20px 0;position:relative;
+#po-page .igfallback .d{font-size:14px;color:var(--muted);max-width:28ch;line-height:1.45}
+#po-page .videocap{font-size:13.5px;color:var(--muted);margin-top:12px;text-align:center}
+#po-page .faq{display:grid;gap:0;border-top:1px solid var(--rule)}
+#po-page .faq details{border-bottom:1px solid var(--rule)}
+#po-page .faq summary{cursor:pointer;padding:20px 40px 20px 0;position:relative;
   font-family:var(--display);font-size:18.5px;font-weight:700;color:var(--bone);
   line-height:1.3;list-style:none}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-family:var(--body);
+#po-page .faq summary::-webkit-details-marker{display:none}
+#po-page .faq summary::after{content:"+";position:absolute;right:6px;top:18px;font-family:var(--body);
   font-size:26px;font-weight:400;color:var(--accent);line-height:1}
-.faq details[open] summary::after{content:"\2013"}
-.faq .a{padding:0 0 22px;color:var(--bone-2);max-width:72ch}
-.faq .a p:last-child{margin-bottom:0}
-.faq summary:focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px}
-
-/* ---------- form ---------- */
-.form{display:grid;gap:17px;max-width:640px}
-.row2{display:grid;grid-template-columns:1fr 1fr;gap:17px}
-@media(max-width:560px){.row2{grid-template-columns:1fr}}
-.field label{display:block;font-family:var(--cond);font-size:12.5px;font-weight:600;
+#po-page .faq details[open] summary::after{content:"\2013"}
+#po-page .faq .a{padding:0 0 22px;color:var(--bone-2);max-width:72ch}
+#po-page .faq .a p:last-child{margin-bottom:0}
+#po-page .faq summary:focus-visible{outline:2px solid var(--accent-hi);outline-offset:2px}
+#po-page .form{display:grid;gap:17px;max-width:640px}
+#po-page .row2{display:grid;grid-template-columns:1fr 1fr;gap:17px}
+@media(max-width:560px){#po-page .row2{grid-template-columns:1fr}
+}
+#po-page .field label{display:block;font-family:var(--cond);font-size:12.5px;font-weight:600;
   letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:7px}
-.field input,.field select,.field textarea{width:100%;background:var(--panel-2);
+#po-page .field input, #po-page .field select, #po-page .field textarea{width:100%;background:var(--panel-2);
   border:1px solid var(--rule);border-radius:3px;padding:12px 14px;color:var(--bone);
   font-family:var(--body);font-size:16px}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--accent)}
-.field textarea{min-height:110px;resize:vertical}
-
-/* ---------- booking widget ---------- */
-.bookframe{position:relative;min-height:760px;border:1px solid var(--rule);border-radius:6px;
+#po-page .field input:focus, #po-page .field select:focus, #po-page .field textarea:focus{outline:none;border-color:var(--accent)}
+#po-page .field textarea{min-height:110px;resize:vertical}
+#po-page .bookframe{position:relative;min-height:760px;border:1px solid var(--rule);border-radius:6px;
   overflow:hidden;background:var(--panel-2)}
-.bookframe iframe{width:100%;min-height:760px;border:0;display:block;position:relative;z-index:2}
-.bookfallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
+#po-page .bookframe iframe{width:100%;min-height:760px;border:0;display:block;position:relative;z-index:2}
+#po-page .bookfallback{position:absolute;inset:0;z-index:1;display:flex;flex-direction:column;
   align-items:center;justify-content:center;gap:16px;text-align:center;padding:40px 28px}
-.bookfallback .t{font-family:var(--display);font-size:22px;font-weight:700;color:var(--bone)}
-.bookfallback .d{font-size:15px;color:var(--muted);max-width:40ch;line-height:1.5}
-@media(max-width:560px){.bookframe,.bookframe iframe{min-height:820px}}
-
-/* the primary CTA is a long string — let it wrap rather than overflow */
-.ctarow .btn{max-width:100%;white-space:normal;text-align:center;line-height:1.25}
-@media(max-width:420px){.ctarow{flex-direction:column}.ctarow .btn{width:100%}}
-
-/* ---------- final cta ---------- */
-.finalcta{background:linear-gradient(165deg,#26331E,#17281D 66%);
+#po-page .bookfallback .t{font-family:var(--display);font-size:22px;font-weight:700;color:var(--bone)}
+#po-page .bookfallback .d{font-size:15px;color:var(--muted);max-width:40ch;line-height:1.5}
+@media(max-width:560px){#po-page .bookframe, #po-page .bookframe iframe{min-height:820px}
+}
+#po-page .ctarow .btn{max-width:100%;white-space:normal;text-align:center;line-height:1.25}
+@media(max-width:420px){#po-page .ctarow{flex-direction:column}
+#po-page .ctarow .btn{width:100%}
+}
+#po-page .finalcta{background:linear-gradient(165deg,#26331E,#17281D 66%);
   border-block:1px solid var(--bronze)}
-
-/* ---------- footer ---------- */
-footer{background:var(--deep);border-top:1px solid var(--rule);padding-block:46px 30px;font-size:15px}
-.fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;margin-bottom:34px}
-@media(max-width:760px){.fgrid{grid-template-columns:1fr 1fr}}
-@media(max-width:480px){.fgrid{grid-template-columns:1fr}}
-footer h4{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.18em;
+#po-page footer{background:var(--deep);border-top:1px solid var(--rule);padding-block:46px 30px;font-size:15px}
+#po-page .fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:34px;margin-bottom:34px}
+@media(max-width:760px){#po-page .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){#po-page .fgrid{grid-template-columns:1fr}
+}
+#po-page footer h4{font-family:var(--cond);font-size:12px;font-weight:600;letter-spacing:.18em;
   text-transform:uppercase;color:var(--muted);margin:0 0 14px}
-footer a{color:var(--bone-2);text-decoration:none;display:block;margin-bottom:9px}
-footer a:hover{color:var(--accent-hi)}
-footer .addr{color:var(--bone-2);line-height:1.7}
-.fbot{border-top:1px solid var(--rule);padding-top:22px;display:flex;
+#po-page footer a{color:var(--bone-2);text-decoration:none;display:block;margin-bottom:9px}
+#po-page footer a:hover{color:var(--accent-hi)}
+#po-page footer .addr{color:var(--bone-2);line-height:1.7}
+#po-page .fbot{border-top:1px solid var(--rule);padding-top:22px;display:flex;
   justify-content:space-between;gap:18px;flex-wrap:wrap;color:var(--muted);font-size:13.5px}
-
-/* ---------- mobile call bar ---------- */
-.callbar{display:none}
-@media(max-width:1280px){
-  .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
+#po-page .callbar{display:none}
+@media(max-width:1280px){#po-page .callbar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:70;
     background:rgba(18,32,23,.97);backdrop-filter:blur(8px);
     border-top:1px solid var(--rule);gap:10px;
     padding:11px 14px calc(11px + env(safe-area-inset-bottom,0px))}
-  .callbar .btn{flex:1;padding:13px 10px}
-  body{padding-bottom:74px}
+#po-page .callbar .btn{flex:1;padding:13px 10px}
+#po-page{padding-bottom:74px}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto}}
+@media (prefers-reduced-motion:reduce){#po-page *{transition:none!important;scroll-behavior:auto}
+}
+@media(max-width:860px){#po-page .two{grid-template-columns:1fr!important}
+}
 
-@media(max-width:860px){.two{grid-template-columns:1fr!important}}
+/* ---- GHL guard: lock the design regardless of GHL theme, page colours, or dark mode ---- */
+:root{color-scheme:dark only}
+html,body{background:#122017!important}
+[class*="section"]:has(#po-page),[class*="row"]:has(#po-page),[class*="col"]:has(#po-page),
+[class*="inner"]:has(#po-page),[class*="custom-code"]:has(#po-page){
+  background:#122017!important;padding:0!important;margin:0!important;max-width:none!important;width:100%!important}
+#po-page{display:block;width:100%;background:var(--ground);color:var(--bone);color-scheme:dark only;
+  font-family:var(--body);font-size:17px;line-height:1.62;font-weight:400;-webkit-font-smoothing:antialiased;
+  text-align:left;forced-color-adjust:none}
+#po-page section{background:var(--ground)}
+#po-page h1,#po-page h2,#po-page h3{color:var(--bone)}
+#po-page p,#po-page li,#po-page td,#po-page th,#po-page summary,#po-page label,#po-page strong,#po-page b,#po-page em,#po-page span{color:inherit}
+#po-page p,#po-page li{font-family:var(--body);font-weight:400}
 
 /* tighten nav so the Book button never overflows at 1281-1400px */
-@media(min-width:1281px) and (max-width:1400px){nav.main{gap:11px}nav.main a{font-size:12.5px;letter-spacing:.07em}}
+@media(min-width:1281px) and (max-width:1400px){#po-page nav.main{gap:11px}#po-page nav.main a{font-size:12.5px;letter-spacing:.07em}}
 /* GHL: neutralise builder padding around the code element */
 body{margin:0}
 </style>
@@ -295,8 +284,8 @@ body{margin:0}
   ]
 }
 </script>
-<div class="po-site">
-<header class="topbar"><div class="topin"><a class="brand" href="/"><img class="mark" data-po-logo src="" alt="" width="46" height="46" decoding="async"><span class="wm"><b>Parker's Outfitting</b><span>Reelfoot Lake &middot; Tennessee</span></span></a><nav class="main"><a href="/reelfoot-lake-duck-hunts">Reelfoot Hunts</a><a href="/private-ground-duck-hunts">Private Ground</a><a href="/lodging">Lodging</a><a href="/rates-packages">Rates</a><a href="/hunt-info" aria-current="page">Hunt Info</a><a href="/gallery">Gallery</a><a href="/faq">FAQ</a><a href="/guest-info">Guest Info</a></nav><a class="btn solid sm" href="/book">Book a Call</a></div></header>
+<div id="po-page" class="po-site">
+<header class="topbar"><div class="topin"><a class="brand" href="/home"><img class="mark" data-po-logo src="" alt="" width="46" height="46" decoding="async"><span class="wm"><b>Parker's Outfitting</b><span>Reelfoot Lake &middot; Tennessee</span></span></a><nav class="main"><a href="/reelfoot-lake-duck-hunts">Reelfoot Hunts</a><a href="/private-ground-duck-hunts">Private Ground</a><a href="/lodging">Lodging</a><a href="/rates-packages">Rates</a><a href="/hunt-info" aria-current="page">Hunt Info</a><a href="/gallery">Gallery</a><a href="/faq">FAQ</a><a href="/guest-info">Guest Info</a></nav><a class="btn solid sm" href="/book">Book a Call</a></div></header>
 <div class="hero"><div class="sky"></div><div class="horizon" aria-hidden="true"></div><div class="inner"><div class="wrap"><div class="herorow"><div><p class="eyebrow">Reelfoot Lake &middot; Northwest Tennessee</p><h1>What To Expect On A Parker's Duck Hunt</h1><p class="sub">Season dates, minimums, dogs, and what's handled for you. The practical detail before you put money down.</p><div class="ctarow"><a class="btn solid" href="/book">Book a Call with Ben</a><a class="btn ghost" href="tel:+17314467066">Call Ben (731) 446-7066</a></div></div><img class="herobadge" data-po-logo src="" alt="Parker's Outfitting" width="260" height="260"></div><div class="hero-facts"><div><div class="n">$400</div><div class="l">per hunter, per day</div></div><div><div class="n">$2,400</div><div class="l">Daily Hunt Min (6 Hunters)</div></div><div><div class="n">$2,700</div><div class="l">lodging from, per day</div></div></div></div></div></div><section><div class="wrap"><div class="shead"><p class="eyebrow">Season</p><h2>Booking December 5 Through January 31</h2><p class="sub">Season dates are set by TWRA. Parker's books guided hunts across the regular season segments inside that window.</p></div><div class="tblwrap"><table class="rates" style="max-width:700px"><thead><tr><th>Segment</th><th>Dates</th></tr></thead><tbody><tr><td>Early</td><td class="num">Dec 5 &ndash; 21</td></tr><tr><td>Mid</td><td class="num">Dec 22 &ndash; Jan 11</td></tr><tr><td>Late</td><td class="num">Jan 12 &ndash; 31</td></tr><tr><td>Youth waterfowl</td><td class="num">Feb 6, Feb 13</td></tr><tr><td>Veterans &amp; active military</td><td class="num">Feb 7, Feb 14</td></tr></tbody></table></div><div class="note"><b>Daily bag limit:</b> 6 ducks, with species caps &mdash; no more than 4 mallards, 3 wood ducks, or 2 canvasbacks. Current TWRA regulations govern all limits. Check them before your hunt.</div></div></section><section class="alt"><div class="wrap"><div class="shead"><p class="eyebrow">The day</p><h2>How A Hunt Runs</h2></div><ul class="ticks" style="max-width:62ch"><li><strong>Hunts are planned around the weather and bird movement</strong> inside the legal shooting window set by TWRA.</li><li><strong>Parker's runs its own dogs.</strong> Customer dogs are not permitted, on the lake or on private ground.</li><li><strong>Your group gets the blind to itself.</strong> Parker's does not mix hunting parties, on the lake or on private ground.</li><li><strong>Six-hunter minimum charge per day.</strong> You are reserving the blind, not a seat in it.</li><li><strong>Lodging and meals can be packaged</strong> with the hunt so the group runs on one plan.</li></ul></div></section><section><div class="wrap narrow"><p class="eyebrow">Licenses</p><h2>Licenses And Permits</h2><p>Hunters are responsible for their own licenses, permits, and stamps. Requirements vary by age and residency, and they change from season to season.</p><div class="note"><b>Check current requirements with TWRA</b> before your hunt rather than relying on any outfitter's summary. Ben can point you in the right direction if you are unsure what you need.</div><p class="eyebrow" style="margin-top:34px">Bring</p><h2>What To Have With You</h2><ul class="ticks"><li>Licenses, permits and stamps</li><li>Waders and cold-weather layers</li><li>Shells</li><li>Blind bag, calls, and anything you shoot better with</li><li>Dry clothes for after the hunt</li></ul><p>If you are traveling in and want to know what to leave at home, call Ben. He would rather answer that on the phone than have you haul gear you do not need.</p></div></section><section class="finalcta"><div class="wrap narrow"><h2>Still Have Questions?</h2><p class="sub">The FAQ covers most of them. Ben covers the rest.</p><p>If your group is close to booking, start with dates and group size and the details sort themselves out fast.</p><div class="ctarow"><a class="btn solid" href="/book">Book a Call with Ben</a><a class="btn ghost" href="tel:+17314467066">Call Ben (731) 446-7066</a></div><p class="emailalt">Or email <a href="mailto:parker247365@gmail.com">parker247365@gmail.com</a></p></div></section>
 <footer><div class="wrap"><div class="fgrid"><div><img class="footmark" data-po-logo src="" alt="Parker's Outfitting" width="86" height="86" loading="lazy"><h4>Parker's Outfitting</h4><p class="addr">Guided Reelfoot Lake duck hunts, premium private-ground hunts, and lodging in Northwest Tennessee.<br><br>Samburg, Tennessee · Reelfoot Lake<br><a href="tel:+17314467066" style="display:inline;color:var(--accent-hi)">(731) 446-7066</a></p></div><div><h4>Hunts &amp; Stays</h4><a href="/reelfoot-lake-duck-hunts">Reelfoot Hunts</a><a href="/private-ground-duck-hunts">Private Ground</a><a href="/lodging">Lodging</a><a href="/rates-packages">Rates</a><a href="/hunt-info">Hunt Info</a><a href="/gallery">Gallery</a><a href="/faq">FAQ</a><a href="/guest-info">Guest Info</a></div><div><h4>Book</h4><a href="/book">Check availability</a><a href="tel:+17314467066">Call Ben</a><a href="https://www.facebook.com/benparkeroutdoors" rel="noopener">Facebook</a><a href="https://www.instagram.com/parkersoutfitting" rel="noopener">Instagram</a></div></div><div class="fbot"><span>&copy; 2026 Parker's Outfitting &middot; Samburg, Tennessee</span><span>Season dates per TWRA. Licenses and permits are the hunter's responsibility.</span></div></div></footer>
 <div class="callbar"><a class="btn ghost" href="tel:+17314467066">Call Ben</a><a class="btn solid" href="/book">Book a Call with Ben</a></div>
