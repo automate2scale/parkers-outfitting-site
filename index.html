@@ -617,10 +617,10 @@ var md=document.querySelector('meta[name="description"]');
 function route(){
   var h=(location.hash||'#home').slice(1), page=h, target=null;
   if(PAGES.indexOf(h)<0){
-    var el=h?document.getElementById(h):null, p=el&&el.closest('[data-page]');
+    var el=h?document.getElementById(h):null, p=el&&el.closest('.page[data-page]');
     if(p){page=p.getAttribute('data-page');target=el}else page='home';
   }
-  document.querySelectorAll('[data-page]').forEach(function(p){p.hidden=p.getAttribute('data-page')!==page});
+  document.querySelectorAll('#po-page .page[data-page]').forEach(function(p){p.hidden=p.getAttribute('data-page')!==page});
   document.querySelectorAll('[data-nav]').forEach(function(a){a.getAttribute('data-nav')===page?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current')});
   var dr=document.getElementById('poDrawer'),mb=document.getElementById('poMenuBtn');if(dr){dr.hidden=true;mb.setAttribute('aria-expanded','false');mb.textContent='Menu'}
   if(T[page])document.title=T[page];
