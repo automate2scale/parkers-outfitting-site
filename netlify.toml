@@ -1,0 +1,56 @@
+# Netlify settings for the Parker's Outfitting single-file site.
+# Publish the repo root. No build step is needed.
+[build]
+  publish = "."
+  command = ""
+
+# Old page URLs go to the matching section of the one-page site.
+[[redirects]]
+  from = "/reelfoot-lake-duck-hunts"
+  to = "/#waterfowl-hunts"
+  status = 301
+[[redirects]]
+  from = "/private-ground-duck-hunts"
+  to = "/#waterfowl-hunts"
+  status = 301
+[[redirects]]
+  from = "/rates-packages"
+  to = "/#faq"
+  status = 301
+[[redirects]]
+  from = "/hunt-info"
+  to = "/#license-info"
+  status = 301
+[[redirects]]
+  from = "/lodging"
+  to = "/#lodging"
+  status = 301
+[[redirects]]
+  from = "/gallery"
+  to = "/#gallery"
+  status = 301
+[[redirects]]
+  from = "/faq"
+  to = "/#faq"
+  status = 301
+[[redirects]]
+  from = "/guest-info"
+  to = "/#guest-info"
+  status = 301
+[[redirects]]
+  from = "/book"
+  to = "/#book"
+  status = 301
+[[redirects]]
+  from = "/home"
+  to = "/"
+  status = 301
+
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=300"

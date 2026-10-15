@@ -1,34 +1,42 @@
-# Parker's Outfitting: pasting the site into GHL
+# Parker's Outfitting website
 
-Each `.html` file is one page and is self-contained. The CSS, fonts, schema, logo and scripts are all inside the file.
+The whole site is one file. `site.html` and `index.html` are identical copies of it.
 
-## Setup for each page (10 total)
-
-1. In **Sites → Websites**, create a page with the path shown in the comment at the top of its file.
-2. Add one full-width **section**. Set its padding to 0 and remove any row or column padding.
-3. Drop in a **Custom Code** element and paste in the whole file.
-4. Open **Page settings → SEO** and paste the Title and Description from the comment at the top of the file.
-5. Turn off the GHL default header and footer for the page. Each file has its own.
-
-| File | Page path |
+| File | Used by |
 |---|---|
-| home.html | `/` (set it as the home page) |
-| reelfoot-lake-duck-hunts.html | `/reelfoot-lake-duck-hunts` |
-| private-ground-duck-hunts.html | `/private-ground-duck-hunts` |
-| lodging.html | `/lodging` |
-| rates-packages.html | `/rates-packages` |
-| hunt-info.html | `/hunt-info` |
-| gallery.html | `/gallery` |
-| faq.html | `/faq` |
-| guest-info.html | `/guest-info` |
-| book.html | `/book` |
+| `site.html` | The GHL page at go.tennesseeoutdoorretreats.com/home. The loader there uses `data-page="site"`. |
+| `index.html` | Any static host, such as Netlify or GitHub Pages, and the future parkersoutfitting.com. |
+| `images/` | The site photos, as WebP at 480, 800 and 1200 px wide. The hero also has an 1800 px version. |
+| `netlify.toml` | Netlify settings, used only if the site is hosted on Netlify. |
+| `GHL-home-head-code.html` | Code for the GHL page head. |
 
-The internal links depend on those exact paths. If you change a path, change it in every file.
+## How it works
 
-## Before going live
+Each page is a `<div class="page" data-page="...">` block inside the one file. A small script shows the block that matches the URL hash and updates the page title and meta description.
 
-- **Logo.** The logo is embedded at the bottom of each file in a `LOGO` constant. To serve it from the GHL Media Library, upload it there and replace the `data:` string with the media URL.
-- **Booking calendar.** The calendar on `book.html` is the widget from the Tennessee Outdoor Retreats sub-account. Before launch, check that its branding and confirmation emails say Parker's Outfitting. Cell phone should be a required field.
-- **Photo slots.** The striped boxes are placeholders: home, Reelfoot, private ground, lodging, and nine on gallery. Replace each one with an `<img>`, using the suggested filename and alt text shown in the slot.
-- **301 redirects.** Point `/corporate-retreats/` and the other old WordPress URLs at the closest new page.
-- **Google Business Profile.** Update it to match the site.
+| Page | Link |
+|---|---|
+| Home | `#home` |
+| Waterfowl Hunts | `#waterfowl-hunts` |
+| Lodging | `#lodging` |
+| License Info | `#license-info` |
+| Gallery | `#gallery` |
+| FAQ | `#faq` |
+| Guest Info | `#guest-info` |
+| Book | `#book` |
+
+All CSS is scoped under `#po-page`, so it does not clash with GHL styles. Images load from jsDelivr through `srcset`, so phones get the smaller files.
+
+## Making a change
+
+1. Edit `index.html`.
+2. Copy it over `site.html` so the two stay identical.
+3. Commit both files.
+4. Clear the CDN cache by opening `https://purge.jsdelivr.net/gh/automate2scale/parkers-outfitting-site@main/site.html`.
+
+## GHL loader
+
+The GHL page holds one Custom Code element containing the loader snippet. It fetches
+`https://cdn.jsdelivr.net/gh/automate2scale/parkers-outfitting-site@main/site.html` and renders it in `#po-root`.
+
+Built and maintained by Automate2Scale.
